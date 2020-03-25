@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#317EFB" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Online/Offline Budget Tracker</title>
+</head>
+
+<body>
+  <div class="wrapper">
+   
+
+    <form>
+      <label for="t-name">Name of new Transaction:</label>
+      <input type="text" id="t-name" placeholder="Name" />
+
+      <label for="t-amount">Amount of new Transaction:</label>
+      <input type="number" min="0" id="t-amount" placeholder="Amount" />
+
+      <div class="transactionBtn">
+        <button id="addfunds-btn"><i class="fa fa-plus"></i> Add Funds Here</button>
+        <button id="subfunds-btn">
+          <i class="fa fa-minus"></i> Subtract Funds Here
+        </button>
+      </div>
+      <p role="alert" class="error"></p>
+    </form>
+
+    <div class="totalAmount">
+        <div>Current Total: $<span id="total">0</span></div>
+      </div>
+
+    <div class="transactionsAmount">
+      <table>
+        <thead>
+          <th>Transaction</th>
+          <th>Amount</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <canvas id="chartdata"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="./database.js"></script>
+  <script src="./index.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js", { scope: "/" })
+        .then(() => console.log("Service worker working"))
+        .catch(error => console.log("Service worker failed", error));
+    };       
+  </script>
+</body>
+
+</html>

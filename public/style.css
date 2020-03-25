@@ -1,0 +1,81 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F7FAFC;
+  }
+  
+  button,
+  input {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  button {
+    background: #3315bb;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 10px;
+    box-shadow: inset 0 -3px 0 0 #4801A5;
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translateY(3px);
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  input {
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: .4em .8em;
+    background-color: #E2E8F0;
+  }
+  
+  input:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #CBD5E0;
+    outline: 0;
+  }
+  
+  
+  table {
+    width: 100%;
+  }
+  
+  .error {
+    columns: #ff0d0d;;
+  }
+  
+  .wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .totalAmount {
+    font-size: 125%;
+  }
+  
+  form {
+    margin-top: 25px;
+  }
+  
+  .transactionsAmount {
+    text-align: left;
+    max-height: 300px;
+    overflow: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .transactionBtn {
+    margin-top: 25px;
+  }
