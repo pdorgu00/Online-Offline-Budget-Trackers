@@ -19,6 +19,7 @@ const budgetSchema = new Schema({
   }
 });
 
+//Set Database name
 const budgets = mongoose.model("budget", budgetSchema);
 
 module.exports = budgets;
