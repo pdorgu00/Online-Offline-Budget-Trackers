@@ -139,6 +139,7 @@ function sendTransaction(Add) {
     });
 }
 
+//Click function Event Listeners
 document.querySelector("#subfunds-btn").addEventListener("click", function(event) {
     event.preventDefault();
     sendTransaction(false);
