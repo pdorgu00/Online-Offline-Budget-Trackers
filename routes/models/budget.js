@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Creating mongo database named budgetSchema
 const Schema = mongoose.Schema;
 
 const budgetSchema = new Schema({
