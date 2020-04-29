@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const expenses = require("../models/budget.js");
 
+//POST Route
 router.post("/api/budget", ({ body }, res) => {
   expenses.create(body)
     .then(dbbudget => {
@@ -11,7 +12,7 @@ router.post("/api/budget", ({ body }, res) => {
     });
 });
 
-
+//GET Route
 router.get("/api/budget", (req, res) => {
   expenses.find({})
     .sort({ date: -1 })
@@ -23,7 +24,7 @@ router.get("/api/budget", (req, res) => {
     });
 });
 
-
+//POST Route
 router.post("/api/budget/bulk", ({ body }, res) => {
     expenses.insertMany(body)
       .then(dbbudget => {
